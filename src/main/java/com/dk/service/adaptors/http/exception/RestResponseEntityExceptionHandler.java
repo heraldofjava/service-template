@@ -1,8 +1,8 @@
 package com.dk.service.adaptors.http.exception;
 
-import com.hj.oneserviceapp.service.exception.ErrorType;
-import com.hj.oneserviceapp.service.exception.InternalSystemException;
-import com.hj.oneserviceapp.service.exception.NotFoundException;
+import com.dk.service.service.exception.ErrorType;
+import com.dk.service.service.exception.InternalSystemException;
+import com.dk.service.service.exception.NotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
