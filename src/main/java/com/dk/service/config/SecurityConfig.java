@@ -22,6 +22,10 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        // Spring Security 7 (Boot 4) enables CSRF for API requests by default, not just
+        // form logins. No state-changing (POST/PUT/DELETE) endpoints exist yet, so this
+        // is a no-op today. Once such endpoints are added, either issue/consume CSRF
+        // tokens or explicitly disable CSRF for this stateless API — don't leave it implicit.
         http
             .authorizeHttpRequests(auth -> auth
                     .anyRequest().authenticated()
